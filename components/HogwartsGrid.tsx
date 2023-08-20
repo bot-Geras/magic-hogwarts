@@ -47,6 +47,7 @@ const HogwartsGrid = ({ characterList }: HogwartsGridProps) => {
               name={character.name}
               id={character.id}
               dateOfBirth={character.dateOfBirth}
+              key={character.name}
             />
           );
         })}
