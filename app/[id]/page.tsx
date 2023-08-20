@@ -16,13 +16,16 @@ const CharacterProfile = async ({ params }: { params: { id: string } }) => {
           key={item.id}
         >
           <h1 className="text-4xl text-bold pt-4 text-white">{item.actor}</h1>
-        <div className="m-4 relative w-[300px] h-[300px]"> <CharacterImage name={item.name} image={item.image} /></div>
+          <div className="m-4 relative w-[300px] h-[300px]">
+            {" "}
+            <CharacterImage name={item.name} image={item.image} />
+          </div>
           <div>
             <p className="text-xl font-bold">{item.name}</p>
             <p>year of Birth : {item.yearOfBirth}</p>
-            <p className="text-white">House : {item.house}</p>
-            <p className="text-white">Wizard : {item.ancestry}</p>
-            <p className="text-white">
+            <p>House : {item.house}</p>
+            <p>Wizard : {item.ancestry}</p>
+            <p>
               {item.gender === "female" ? "Actress" : "Actor"} : {item.actor}
             </p>
           </div>
